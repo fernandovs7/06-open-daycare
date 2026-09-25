@@ -1,6 +1,6 @@
 # SPEC 01 — Feed principal estático
 
-> **Estado:** Borrador
+> **Estado:** Approved
 > **Depende de:** Ninguna
 > **Fecha:** 2026-09-24
 > **Objetivo:** Implementar en `/` una réplica estática y adaptable de `references/pantallas/feed.dc.html` con la misma apariencia visual y contenido de ejemplo.
