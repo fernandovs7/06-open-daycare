@@ -44,6 +44,35 @@ export default function Home() {
               commentCount={1}
               avatar="M"
             />
+            <FeedCard
+              title="Mateo"
+              time="09:40"
+              recipient="familia de Mateo"
+              text="Pintamos con témperas esta mañana. Mateo eligió el azul para todo y se concentró un montón mezclando colores."
+              category="ACTIVIDAD"
+              categoryBackground="#C7E7F1"
+              categoryColor="#2E89A6"
+              identityBackground="#A9D9E8"
+              identityColor="#1F7A93"
+              reactionCount={5}
+              commentCount={2}
+              photoLabel="Foto · pintando con témperas"
+              avatar="M"
+            />
+            <FeedCard
+              title="Anuncio general"
+              time="07:50"
+              recipient="toda la sala"
+              text="El viernes salimos al parque por la mañana. Recuerden mandar gorra y una botellita de agua."
+              category="ANUNCIO"
+              categoryBackground="#CCD8F4"
+              categoryColor="#4E72C8"
+              identityBackground="#CCD8F4"
+              identityColor="#4E72C8"
+              reactionCount={8}
+              commentCount={0}
+              icon="announcement"
+            />
           </div>
         </div>
       </main>
