@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="flex min-h-screen bg-background">
       <Sidebar />
-      <main className="h-screen min-w-0 flex-1 overflow-y-auto">
-        <div className="mx-auto w-full max-w-[760px] px-10 pt-[34px] pb-20">
+      <main className="h-screen w-full min-w-0 flex-1 overflow-y-auto">
+        <div className="mx-auto w-full max-w-[760px] px-4 pt-6 pb-12 md:px-10 md:pt-[34px] md:pb-20">
           <header className="mb-6">
             <div className="mb-1 text-[12.5px] font-extrabold tracking-[0.8px] text-[#D9583C]">
               GUARDERÍA · SALA SOLES

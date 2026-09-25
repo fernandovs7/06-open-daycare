@@ -1,6 +1,6 @@
 export function Sidebar() {
   return (
-    <aside className="sticky top-0 flex h-screen w-[248px] shrink-0 flex-col border-r border-[#ECE0D0] bg-[#FFFDF9] px-4 py-6">
+    <aside className="sticky top-0 hidden h-screen w-[248px] shrink-0 flex-col border-r border-[#ECE0D0] bg-[#FFFDF9] px-4 py-6 md:flex">
       <div className="flex items-center gap-[11px] px-2 pt-1 pb-[22px]">
         <div className="flex size-[38px] shrink-0 items-center justify-center rounded-xl bg-[linear-gradient(155deg,#F8C3A8,#F2937A)]">
           <svg
