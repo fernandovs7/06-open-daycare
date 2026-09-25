@@ -1,4 +1,5 @@
 import { Composer } from "@/app/_components/Composer";
+import { FeedCard } from "@/app/_components/FeedCard";
 import { Sidebar } from "@/app/_components/Sidebar";
 
 export default function Home() {
@@ -26,6 +27,23 @@ export default function Home() {
               PUBLICADO HOY
             </span>
             <span className="h-px flex-1 bg-[#E7DAC8]" />
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <FeedCard
+              title="Mateo"
+              time="14:20"
+              recipient="familia de Mateo"
+              text="¡Usó el orinal solito por primera vez! Estaba feliz de contárselo a todos. Un gran paso."
+              category="LOGRO"
+              categoryBackground="#CFEBD8"
+              categoryColor="#3E9B6C"
+              identityBackground="#A9D9E8"
+              identityColor="#1F7A93"
+              reactionCount={3}
+              commentCount={1}
+              avatar="M"
+            />
           </div>
         </div>
       </main>
