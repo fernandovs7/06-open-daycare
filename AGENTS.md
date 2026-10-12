@@ -29,6 +29,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Use Context7 for current framework documentation. For Next.js behavior, also follow the installed, version-matched docs required above.
 - /spec Usaremos esta habilidad para crear especificaciones.
 - spec/impl Usaremos esta habilidad para hacer las implementaciones.
+- El subagente `spec-acceptance-verifier`, definido en `.opencode/agents/spec-acceptance-verifier.md`, verifica con evidencia los criterios de aceptación y actualiza únicamente sus checkboxes.
+- `/verify-spec <ruta-del-spec>` usa `spec-acceptance-verifier` para verificar una especificación dentro de `specs/`; debe usar Context7 para Next.js y Playwright para criterios observables en el navegador.
 
 ## Reglas de código
 

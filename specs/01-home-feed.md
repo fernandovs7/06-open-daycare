@@ -1,6 +1,6 @@
 # SPEC 01 — Feed principal estático
 
-> **Estado:** Approved
+> **Estado:** Implementado
 > **Depende de:** Ninguna
 > **Fecha:** 2026-09-24
 > **Objetivo:** Implementar en `/` una réplica estática y adaptable de `references/pantallas/feed.dc.html` con la misma apariencia visual y contenido de ejemplo.
@@ -65,20 +65,20 @@ No se modificarán archivos dentro de `references/`, `.next/` ni `next-env.d.ts`
 
 ## Criterios de aceptación
 
-- [ ] Al abrir `/` se muestra el feed de OpenDayCare y no aparece contenido del starter de Next.js.
-- [ ] A 920 × 540, una comparación lado a lado con `references/screenshots/feed.png` no muestra diferencias perceptibles en estructura, tipografía, color, espaciado, bordes ni sombras, salvo variaciones menores de rasterización de fuentes.
-- [ ] En escritorio, la barra lateral mide 248 px, ocupa la altura visible y permanece separada del área desplazable del feed.
-- [ ] El contenido principal está centrado, tiene un ancho máximo de 760 px y conserva el fondo `#F6ECDF` de la referencia.
-- [ ] Se muestran exactamente los textos, nombres, fecha, categorías, destinatarios, contadores y marcador de fotografía definidos en `references/pantallas/feed.dc.html`.
-- [ ] Se muestran las tres publicaciones en el orden logro, actividad y anuncio.
-- [ ] Fredoka se aplica a los elementos destacados de la referencia y Nunito al texto general.
-- [ ] No se carga una hoja CSS remota de Google Fonts durante el uso de la página.
-- [ ] A 390 × 844, la barra lateral no está visible, el feed usa el ancho disponible y `document.documentElement.scrollWidth` no supera `document.documentElement.clientWidth`.
-- [ ] Los controles visuales no cambian la URL, no modifican contenido y no intentan acceder a rutas inexistentes.
-- [ ] La página no presenta errores en la consola del navegador.
-- [ ] `npm run lint -- app` finaliza correctamente.
-- [ ] `npx next typegen && npx tsc --noEmit` finaliza correctamente.
-- [ ] `npm run build` finaliza correctamente.
+- [x] Al abrir `/` se muestra el feed de OpenDayCare y no aparece contenido del starter de Next.js.
+- [x] A 920 × 540, una comparación lado a lado con `references/screenshots/feed.png` no muestra diferencias perceptibles en estructura, tipografía, color, espaciado, bordes ni sombras, salvo variaciones menores de rasterización de fuentes.
+- [x] En escritorio, la barra lateral mide 248 px, ocupa la altura visible y permanece separada del área desplazable del feed.
+- [x] El contenido principal está centrado, tiene un ancho máximo de 760 px y conserva el fondo `#F6ECDF` de la referencia.
+- [x] Se muestran exactamente los textos, nombres, fecha, categorías, destinatarios, contadores y marcador de fotografía definidos en `references/pantallas/feed.dc.html`.
+- [x] Se muestran las tres publicaciones en el orden logro, actividad y anuncio.
+- [x] Fredoka se aplica a los elementos destacados de la referencia y Nunito al texto general.
+- [x] No se carga una hoja CSS remota de Google Fonts durante el uso de la página.
+- [x] A 390 × 844, la barra lateral no está visible, el feed usa el ancho disponible y `document.documentElement.scrollWidth` no supera `document.documentElement.clientWidth`.
+- [x] Los controles visuales no cambian la URL, no modifican contenido y no intentan acceder a rutas inexistentes.
+- [x] La página no presenta errores en la consola del navegador.
+- [x] `npm run lint -- app` finaliza correctamente.
+- [x] `npx next typegen && npx tsc --noEmit` finaliza correctamente.
+- [x] `npm run build` finaliza correctamente.
 
 ## Decisiones
 
@@ -102,12 +102,12 @@ No se modificarán archivos dentro de `references/`, `.next/` ni `next-env.d.ts`
 
 ## Riesgos
 
-| Riesgo | Mitigación |
-| --- | --- |
-| Diferencias de rasterización impiden una coincidencia visual absoluta. | Comparar en Chromium al mismo viewport y aceptar únicamente variaciones menores de rasterización. |
-| La composición fija de escritorio produce overflow en pantallas angostas. | Ocultar la barra lateral por debajo de 768 px y validar `scrollWidth` a 390 × 844. |
-| Elementos con apariencia de enlace intentan navegar a rutas no implementadas. | Renderizarlos sin destinos navegables ni manejadores de estado. |
-| La reutilización de `FeedCard` elimina diferencias visuales entre categorías. | Mantener props explícitas para avatar o icono, colores, etiqueta y contenido visual opcional. |
+| Riesgo                                                                        | Mitigación                                                                                        |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Diferencias de rasterización impiden una coincidencia visual absoluta.        | Comparar en Chromium al mismo viewport y aceptar únicamente variaciones menores de rasterización. |
+| La composición fija de escritorio produce overflow en pantallas angostas.     | Ocultar la barra lateral por debajo de 768 px y validar `scrollWidth` a 390 × 844.                |
+| Elementos con apariencia de enlace intentan navegar a rutas no implementadas. | Renderizarlos sin destinos navegables ni manejadores de estado.                                   |
+| La reutilización de `FeedCard` elimina diferencias visuales entre categorías. | Mantener props explícitas para avatar o icono, colores, etiqueta y contenido visual opcional.     |
 
 ## Lo que **no** incluye esta especificación
 
